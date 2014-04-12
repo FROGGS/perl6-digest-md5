@@ -32,4 +32,7 @@ class Digest::MD5:auth<cosimo>:ver<0.05> {
 
     }
 
+    method md5 (Blob $msg) {
+        die "Don't know how to do md5 on Buf/Blob with parrot";
+    }
 }

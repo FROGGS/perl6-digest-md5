@@ -49,6 +49,10 @@ class Digest::MD5:auth<cosimo>:ver<0.05> {
         Buf.new: little-endian(8, 4, @H)
     }
 
+    method md5(Blob $msg){
+        return md5($msg);
+    }
+
     multi method md5_hex(Str $str) {
         md5( $str.encode('ascii') ).list».fmt('%02x').join
     }
